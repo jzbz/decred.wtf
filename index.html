@@ -56,13 +56,14 @@
         }
 
         .header-image {
-            width: 100%;
-            max-width: 614px;
+            width: 614px;
+            height: 614px;
             margin: 0 auto;
             display: block;
             border-radius: 16px;
             border: 2px solid var(--primary);
             box-shadow: 0 0 40px rgba(0, 255, 0, 0.2);
+            object-fit: cover;
         }
 
         .features {
@@ -148,6 +149,8 @@
         @media (max-width: 614px) {
             .header-image {
                 max-width: 100%;
+                height: auto;
+                max-width: 614px;
             }
 
             .feature-item {
@@ -163,7 +166,7 @@
 <body>
     <div class="container">
         <header class="header">
-            <img src="decred.wtf.avif" alt="WTF is Decred?" class="header-image">
+            <img src="decred.wtf.avif" alt="WTF is Decred?" class="header-image" width="614" height="614">
         </header>
 
         <div class="features">
