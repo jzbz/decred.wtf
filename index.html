@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WTF is Decred?</title>
+    <style>
+        @font-face {
+            font-family: 'Space Mono';
+            font-style: normal;
+            font-weight: 400;
+            src: url(/space-mono.woff) format('woff');
+        }
+
+        @font-face {
+            font-family: 'Space Mono';
+            font-style: normal;
+            font-weight: 700;
+            src: url(/space-mono.woff) format('woff');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Mono', monospace;
+        }
+
+        :root {
+            --primary: #00ff00;
+            --secondary: #ff00ff;
+            --bg: #120528;
+            --surface: rgba(18, 5, 40, 0.3);
+        }
+
+        body {
+            background: var(--bg);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .header-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 16px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 40px rgba(0, 255, 0, 0.2);
+        }
+
+        .features {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .feature-item {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.05);
+        }
+
+        .feature-item h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .feature-item h2::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-size: 2rem;
+        }
+
+        .links-section {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: linear-gradient(
+                45deg,
+                rgba(0, 255, 0, 0.02),
+                rgba(255, 0, 255, 0.02)
+            );
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .link-item {
+            padding: 1rem;
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .link-item:hover {
+            background: rgba(255, 0, 255, 0.1);
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
+        }
+
+        .link-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .link-item a:hover {
+            color: var(--secondary);
+            text-shadow: 0 0 10px var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .header-image {
+                max-width: 100%;
+            }
+
+            .feature-item {
+                padding: 1.5rem;
+            }
+
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="decred.wtf.avif" alt="WTF is Decred?" class="header-image">
+        </header>
+
+        <div class="features">
+            <div class="feature-item">
+                <h2>Decentralized</h2>
+                <p>Hybrid consensus system ensures true decentralization through Proof-of-Work and Proof-of-Stake.</p>
+            </div>
+            <div class="feature-item">
+                <h2>Private</h2>
+                <p>CoinShuffle++ integration enables anonymous transactions with cutting-edge cryptography.</p>
+            </div>
+            <div class="feature-item">
+                <h2>Secure</h2>
+                <p>Military-grade security with blockchain-based timestamping and immutable audit trails.</p>
+            </div>
+            <div class="feature-item">
+                <h2>Sovereign</h2>
+                <p>Community governance model gives stakeholders direct control over protocol evolution.</p>
+            </div>
+            <div class="feature-item">
+                <h2>Evolving</h2>
+                <p>Continuous upgrades through decentralized voting ensure adaptability to future challenges.</p>
+            </div>
+        </div>
+
+        <div class="links-section">
+            <h3>Explore Decred</h3>
+            <div class="links-grid">
+                <div class="link-item">
+                    <a href="https://decred.org" target="_blank" rel="noopener">
+                        🌐 Official Website
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://play.google.com/store/apps/details?id=com.cakewallet.cake_wallet" target="_blank" rel="noopener">
+                        🤖 Android Wallet
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://apps.apple.com/us/app/cake-wallet/id1334702542" target="_blank" rel="noopener">
+                        🍏 iOS Wallet
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://dcrdata.decred.org" target="_blank" rel="noopener">
+                        🔍 Blockchain Explorer
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://t.me/Decred" target="_blank" rel="noopener">
+                        ✈️ Telegram
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://discord.gg/dXSmwvYury" target="_blank" rel="noopener">
+                        🎮 Discord
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.reddit.com/r/decred/" target="_blank" rel="noopener">
+                        🚀 Reddit
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://github.com/decred" target="_blank" rel="noopener">
+                        👾 GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
